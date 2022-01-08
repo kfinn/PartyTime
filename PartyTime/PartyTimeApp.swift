@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct PartyTimeApp: App {
+    @ObservedObject var homeManager = HomeManager.instance
+    @StateObject private var partyTimer = PartyTimer()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            List(homeManager.lights, selection: $partyTimer.selectedUUIDs) {
+                Text($0.name)
+            }
+            .environment(\.editMode, .constant(.active))
         }
     }
 }

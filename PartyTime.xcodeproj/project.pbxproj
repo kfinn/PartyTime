@@ -8,17 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		0A47548627869ED600E711A4 /* PartyTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A47548527869ED600E711A4 /* PartyTimeApp.swift */; };
-		0A47548827869ED600E711A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A47548727869ED600E711A4 /* ContentView.swift */; };
 		0A47548A27869ED700E711A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A47548927869ED700E711A4 /* Assets.xcassets */; };
 		0A47548D27869ED700E711A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A47548C27869ED700E711A4 /* Preview Assets.xcassets */; };
+		0A47549627869EE600E711A4 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A47549527869EE600E711A4 /* HomeKit.framework */; };
+		0AA926A02787A8CA0086F6AC /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA9269F2787A8CA0086F6AC /* HomeManager.swift */; };
+		0AA926A42787B3B20086F6AC /* PartyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA926A32787B3B20086F6AC /* PartyTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A47548227869ED600E711A4 /* PartyTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A47548527869ED600E711A4 /* PartyTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyTimeApp.swift; sourceTree = "<group>"; };
-		0A47548727869ED600E711A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0A47548927869ED700E711A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A47548C27869ED700E711A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0A47549327869EE600E711A4 /* PartyTime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PartyTime.entitlements; sourceTree = "<group>"; };
+		0A47549527869EE600E711A4 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		0AA9269F2787A8CA0086F6AC /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
+		0AA926A32787B3B20086F6AC /* PartyTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A47549627869EE600E711A4 /* HomeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +43,7 @@
 			children = (
 				0A47548427869ED600E711A4 /* PartyTime */,
 				0A47548327869ED600E711A4 /* Products */,
+				0A47549427869EE600E711A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,8 +58,10 @@
 		0A47548427869ED600E711A4 /* PartyTime */ = {
 			isa = PBXGroup;
 			children = (
+				0A47549327869EE600E711A4 /* PartyTime.entitlements */,
 				0A47548527869ED600E711A4 /* PartyTimeApp.swift */,
-				0A47548727869ED600E711A4 /* ContentView.swift */,
+				0AA926A32787B3B20086F6AC /* PartyTimer.swift */,
+				0AA9269F2787A8CA0086F6AC /* HomeManager.swift */,
 				0A47548927869ED700E711A4 /* Assets.xcassets */,
 				0A47548B27869ED700E711A4 /* Preview Content */,
 			);
@@ -65,6 +74,14 @@
 				0A47548C27869ED700E711A4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0A47549427869EE600E711A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A47549527869EE600E711A4 /* HomeKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +154,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A47548827869ED600E711A4 /* ContentView.swift in Sources */,
+				0AA926A42787B3B20086F6AC /* PartyTimer.swift in Sources */,
 				0A47548627869ED600E711A4 /* PartyTimeApp.swift in Sources */,
+				0AA926A02787A8CA0086F6AC /* HomeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,12 +284,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PartyTime/PartyTime.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PartyTime/Preview Content\"";
 				DEVELOPMENT_TEAM = JGJC2NGW6L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHomeKitUsageDescription = "Configure your lights to start the party";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -295,12 +315,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PartyTime/PartyTime.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PartyTime/Preview Content\"";
 				DEVELOPMENT_TEAM = JGJC2NGW6L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHomeKitUsageDescription = "Configure your lights to start the party";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
