@@ -24,6 +24,7 @@
 		0A47549527869EE600E711A4 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 		0AA9269F2787A8CA0086F6AC /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
 		0AA926A32787B3B20086F6AC /* PartyTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyTimer.swift; sourceTree = "<group>"; };
+		0AA926A5278911940086F6AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 		0A47548427869ED600E711A4 /* PartyTime */ = {
 			isa = PBXGroup;
 			children = (
+				0AA926A5278911940086F6AC /* Info.plist */,
 				0A47549327869EE600E711A4 /* PartyTime.entitlements */,
 				0A47548527869ED600E711A4 /* PartyTimeApp.swift */,
 				0AA926A32787B3B20086F6AC /* PartyTimer.swift */,
@@ -291,6 +293,7 @@
 				DEVELOPMENT_TEAM = JGJC2NGW6L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PartyTime/Info.plist;
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "Configure your lights to start the party";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -322,6 +325,7 @@
 				DEVELOPMENT_TEAM = JGJC2NGW6L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PartyTime/Info.plist;
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "Configure your lights to start the party";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
